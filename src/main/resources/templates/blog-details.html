@@ -16,7 +16,12 @@
     <p th:text="${element.full_text}"/>
     <p><b>Views</b><span th:text="${element.views}"/></p>
     <a th:href="'/blog/' + ${element.id} + '/edit'" class="btn btn-warning">Edit</a>
-    <a th:href="'/blog/' + ${element.id} + '/remove'" class="btn btn-warning">Remove</a>
+       <br>
+       <br>
+       <form th:action="'/blog/' + ${element.id} + '/remove'" method="post">
+           <button class="btn btn-warning" type="submit">Remove</button>
+       </form>
+
   </div>
 </div>
 
